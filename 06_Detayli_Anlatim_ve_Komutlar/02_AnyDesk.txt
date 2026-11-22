@@ -1,0 +1,37 @@
+﻿========================================================================
+02. ANYDESK (UZAKTAN BAĞLANTI ARACI)
+SEVİYE: TEMEL (UZAKTAN BAĞLANTI)
+========================================================================
+KONUMU:
+- 05_Uzaktan_Baglanti\AnyDesk\AnyDesk.exe
+
+[NE İŞE YARAR?]
+SS (Screenshare) kontrolü sırasında şüpheli oyuncunun bilgisayarına
+güvenli ve düşük gecikmeli şekilde uzaktan bağlanıp yukarıdaki tüm
+araçları bizzat kendin çalıştırmanı sağlar.
+
+[ADIM ADIM KULLANIM]
+1. AnyDesk.exe'yi çalıştır (kurulum gerektirmez, taşınabilir sürüm).
+2. Oyuncudan kendi AnyDesk ekranındaki 9-10 haneli adresi iste.
+3. Üstteki "Uzak Masaüstü" kutusuna oyuncunun adresini yazıp bağlan.
+4. Oyuncu ekrandaki "Kabul Et" (Accept) butonuna bastığında kontrol başlar.
+
+[SS SIRASINDA GÜVENLİK VE ETİK KURALLAR]
+- Sadece kontrol için gerekli sistem/oyun klasörlerine ve SS araçlarına bak.
+- Oyuncunun özel sohbet, banka, fotoğraf vb. kişisel verilerine kesinlikle
+  girme; her adımı ekran kaydı açıkken şeffaf şekilde yap.
+- Kontrol bittiğinde oyuncunun bilgisayarına indirdiğin SS araçlarını ve
+  C:\SS_Tools klasörünü temizleyip bağlantıyı sonlandır.
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

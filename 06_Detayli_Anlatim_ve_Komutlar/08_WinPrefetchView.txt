@@ -1,0 +1,47 @@
+﻿========================================================================
+08. WINPREFETCHVIEW (SON ÇALIŞTIRILAN PROGRAMLAR - PREFETCH ANALİZİ)
+SEVİYE: ORTA (PREFETCH ÇALIŞTIRMA GEÇMİŞİ)
+========================================================================
+KONUMU:
+- 03_Dosya_ve_Calistirma_Gecmisi\WinPrefetchView\WinPrefetchView.exe
+
+[NE İŞE YARAR?]
+Windows, programların daha hızlı açılması için C:\Windows\Prefetch
+klasöründe her çalıştırılan .exe için bir ".pf" dosyası tutar.
+WinPrefetchView bu kayıtları okuyarak hangi programın:
+- Kaç kez çalıştırıldığını (Run Counter),
+- En son ne zaman çalıştırıldığını (Last Run Time),
+- Hangi klasörden çalıştığını (Process Path)
+gösterir — dosya sonradan silinmiş olsa bile!
+
+[ADIM ADIM KULLANIM]
+1. WinPrefetchView.exe'ye SAĞ TIKLA -> "Yönetici olarak çalıştır".
+2. Üstten "Last Run Time" sütununa tıkla (en son açılanlar en üste gelsin).
+3. Kontrol etmen gerekenler:
+   - SS saatinden hemen önceki 30-60 dakika içinde çalıştırılan .exe'ler.
+   - "Process Path" sütununda Desktop, Downloads, Temp veya USB sürücü
+     (D:, E:, F:) yolundan çalışmış şüpheli isimler.
+   - Tek bir satıra tıkladığında alt panelde o programın eriştiği .dll ve
+     dosya yolları da görünür! (Örn. CMD/PowerShell açılıp cleaner çalıştıysa).
+   - "CMD.EXE", "POWERSHELL.EXE", "FSUTIL.EXE", "WEVTUTIL.EXE", "REG.EXE"
+     son dakikalarda çalıştırıldıysa oyuncu iz silme komutu yazmış olabilir!
+
+[MANİPÜLASYON KONTROLÜ]
+- Liste tamamen boşsa veya sadece 3-5 dosya varsa:
+  -> Oyuncu C:\Windows\Prefetch klasörünü temizlemiş veya SysMain
+     hizmetini / Prefetch kayıt defteri ayarını kapatmıştır!
+- Bazı .pf dosyaları salt-okunur (Read-Only) yapılmışsa -> Prefetch
+  manipülasyonu (bypass) girişimidir!
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

@@ -1,0 +1,44 @@
+﻿========================================================================
+05. WEBBROWSERDOWNLOADSVIEW (TÜM TARAYICILARIN İNDİRME GEÇMİŞİ)
+SEVİYE: TEMEL-ORTA (İNDİRME GEÇMİŞİ)
+========================================================================
+KONUMU:
+- 04_Tarayici_ve_USB_Gecmisi\WebBrowserDownloadsView\BrowserDownloadsView.exe
+
+[NE İŞE YARAR?]
+Bilgisayardaki tüm tarayıcılardan indirilmiş dosyaların:
+- Dosya adını ve nereye kaydedildiğini (Full Path),
+- Hangi web sitesinden indirildiğini (Download URL & Referrer URL),
+- İndirme tarih ve saatini (Start Time / End Time),
+- Dosya boyutunu
+tek ekranda gösterir. Dosya diskten silinmiş olsa bile tarayıcı
+veritabanından temizlenmediyse burada görünür!
+
+[ADIM ADIM KULLANIM]
+1. BrowserDownloadsView.exe'yi aç (tüm tarayıcıları otomatik tarar).
+2. "Start Time" sütununa tıklayarak en yeni indirmeleri en üste al.
+3. Özellikle şu uzantılara ve sütunlara bak:
+   - .exe, .jar, .dll, .zip, .rar, .7z dosyaları.
+   - "Download URL" ve "Referrer URL" sütunları:
+     Dosya adı masum görünse bile (örn. "setup.exe" veya "update.jar")
+     hangi siteden/Discord linkinden indirildiğini burada net görürsün!
+4. Ctrl + F ile arama yap:
+   - .jar  |  .exe  |  .dll  |  cheat  |  client  |  clicker  |  cdn.discordapp
+
+[İPUCU]
+- İndirilen dosya "Downloads" klasöründe artık yoksa (silinmişse),
+  buradan gerçek adını ve saatini alıp Journal-Tool + Amcache + BAM'da
+  çalıştırılıp çalıştırılmadığını hemen kontrol edebilirsin!
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

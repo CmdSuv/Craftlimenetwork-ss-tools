@@ -1,0 +1,78 @@
+﻿========================================================================
+00. TÜM SS KONTROL ARAÇLARI - KONTROL GÜCÜNE GÖRE SIRALI ÖZET (01 -> 17)
+========================================================================
+SIRALAMA MANTIĞI:
+  01      : Ocean Anti-Cheat (Otomatik tarama - Sabit 1. sıra)
+  02 -> 17: En basit / yüzeysel kontrolden EN ZOR / EN GÜÇLÜ adli bilişime!
+
+--- TAM SIRALAMA LİSTESİ ---
+01. Ocean Anti-Cheat                [Otomatik Hızlı Tarama - PIN ile]
+02. AnyDesk                         [Temel - Uzaktan Bağlantı]
+03. Everything                      [Temel - Anlık Dosya Arama]
+04. BrowsingHistoryView             [Temel - Tarayıcı Geçmişi]
+05. WebBrowserDownloadsView         [Temel-Orta - İndirme Geçmişi]
+06. USBDriveLog                     [Temel-Orta - USB Takma/Çıkarma]
+07. ComputerActivityView            [Orta - Kronolojik Aktivite Özeti]
+08. WinPrefetchView                 [Orta - Prefetch Çalıştırma Geçmişi]
+09. PrivaZer Shellbag Analyzer      [Orta - Silinmiş Klasör Geçmişi]
+10. Event Viewer                    [Orta-İleri - Log Silme & Saat Hilesi]
+11. Journal Tool (journal-tool.exe) [İleri - NTFS USN Journal]
+12. Timeline Explorer               [İleri - CSV Analiz Arayüzü]
+13. AmcacheParser + BAM             [İleri - Çalıştırma Saati + SHA-1]
+14. RawCopy + SrumECmd              [Çok Güçlü - SRUDB.dat İnternet Faturası]
+15. MFTECmd ($MFT)                  [Çok Güçlü - $MFT Silinenler & Timestomp]
+16. Process Hacker 2.39             [Uzman - Canlı RAM String Taraması]
+17. Hollows Hunter                  [EN GÜÇLÜ - Fileless RAM & Enjeksiyon]
+
+========================================================================
+HIZLI KOPYALA / YAPIŞTIR KOMUTLARI (YÖNETİCİ CMD)
+========================================================================
+HER KOMUT ÖNCESİ İLK SATIR:
+cd /d C:\SS_Tools
+
+[10] EVENT VIEWER (Win + R):
+eventvwr.msc
+  Sistem Filtre:   104, 7036, 1074
+  Güvenlik Filtre: 1102, 4616
+
+[13] AMCACHE + BAM:
+RawCopy64.exe /FileNamePath:C:\Windows\AppCompat\Programs\Amcache.hve /OutputPath:C:\SS_Tools\Cikti
+AmcacheParser.exe -f "C:\SS_Tools\Cikti\Amcache.hve" --csv "C:\SS_Tools\Cikti"
+BAM (Win + R -> regedit):
+  HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\bam\State\UserSettings
+Manuel SHA-1:
+  certutil -hashfile "DOSYA_YOLU" SHA1
+
+[14] RAWCOPY + SRUMECMD (SRUDB.dat):
+RawCopy64.exe /FileNamePath:C:\Windows\System32\sru\SRUDB.dat /OutputPath:C:\SS_Tools\Cikti
+SrumECmd.exe -f "C:\SS_Tools\Cikti\SRUDB.dat" --csv "C:\SS_Tools\Cikti"
+
+[15] MFTECMD ($MFT):
+MFTECmd.exe -f "C:\$MFT" --csv "C:\SS_Tools\Cikti" --csvf mft_rapor.csv
+
+[16] PROCESS HACKER 2.39 (Yönetici aç):
+  javaw.exe -> Memory -> Strings (Min: 4, Image+Mapped) -> Reach, Velocity, AutoClicker, AimAssist, Vape, .dll
+  Services -> DiagTrack, PcaSvc (Filter: .exe) | Dnscache (Filter: http / .com / .gg)
+
+[17] HOLLOWS HUNTER (EN GÜÇLÜ):
+  Sadece Minecraft (hızlı):
+    hollows_hunter64.exe /pname javaw.exe /shellc 1
+  Sadece Minecraft (detaylı - hook + shellcode):
+    hollows_hunter64.exe /pname javaw.exe /shellc 3 /hooks
+  Hem javaw hem java birlikte:
+    hollows_hunter64.exe /pname javaw.exe;java.exe /shellc 1 /hooks
+  Tüm bilgisayar:
+    hollows_hunter64.exe /shellc 1 /hooks
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

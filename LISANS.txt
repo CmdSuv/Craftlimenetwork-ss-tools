@@ -1,0 +1,42 @@
+﻿========================================================================
+LİSANS VE TELİF HAKKI BİLDİRİMİ (LICENSE & COPYRIGHT NOTICE)
+========================================================================
+Telif Hakkı (c) 2026 Omar Yiğitcan Mengü
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+KULLANIM KOŞULLARI:
+
+1. KULLANILABİLİR (İZİN VERİLEN KULLANIM):
+   Bu dokümanlar, komut listeleri ve SS kontrol rehber paketi; bireysel
+   kullanım, eğitim ve Minecraft sunucu yetkili (Screenshare / SS)
+   kontrolleri amacıyla ücretsiz olarak kullanılabilir ve orijinal
+   hali bozulmadan paylaşılabilir.
+
+2. DEĞİŞTİRİLEMEZ (TÜREV ÇALIŞMA YASAĞI - NoDerivatives):
+   Bu dosyaların içeriği değiştirilemez, yeniden düzenlenemez, kısmen
+   veya tamamen başka bir isim altında yayınlanamaz ve yazarın adı
+   yerine başka bir kişi/kurum adı yazılamaz.
+
+3. SATILAMAZ (TİCARİ KULLANIM YASAĞI - NonCommercial):
+   Bu dosyalar ve rehber paketi hiçbir şekilde satılamaz, kiralanamaz,
+   ücretli paket/eğitim/hizmet içine dahil edilerek ticari kazanç elde
+   etmek amacıyla kullanılamaz.
+
+4. LİSANS ÇIKARILAMAZ (ZORUNLU KORUMA):
+   Bu lisans ve telif hakkı bildirimi ne olursa olsun dosyalardan
+   çıkarılamaz, silinemez, gizlenemez veya değiştirilemez. Herhangi bir
+   kullanım, kopyalama veya paylaşımda bu lisans metninin ve yazar
+   bilgilerinin (Omar Yiğitcan Mengü - https://github.com/CmdSuv)
+   dosya içinde eksiksiz olarak kalması zorunludur.
+
+5. ÜÇÜNCÜ TARAF YAZILIMLAR NOTU:
+   Bu lisans; Omar Yiğitcan Mengü tarafından hazırlanan rehber
+   metinlerini, anlatımları, komut derlemelerini ve klasör düzenini
+   kapsar. Paket içinde yer alan üçüncü taraf araçlar kendi orijinal
+   geliştiricilerinin lisans ve kullanım koşullarına tabidir.
+
+========================================================================
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+========================================================================

@@ -1,0 +1,47 @@
+﻿========================================================================
+01. OCEAN ANTI-CHEAT (OTOMATİK ADLİ BİLİŞİM TARAYICISI)
+SEVİYE: BAŞLANGIÇ (OTOMATİK TARAMA - SABİT 1. SIRA)
+========================================================================
+RESMİ ADRES: https://anticheat.ac/tr/downloads
+
+[NEDEN KLASÖRDE HAZIR EXE YOK?]
+Ocean Anti-Cheat statik/tek bir .exe olarak dağıtılmaz. Her tarama için
+yetkili tarafından Ocean panelinden 8 haneli, tek kullanımlık bir PIN
+oluşturulur; oyuncu siteye o PIN'i girdiğinde o taramaya özel scanner
+dosyası anlık olarak indirilir.
+(NOT: Ocean'ın çalışması için gerekli Visual C++ Redistributable x64 bu
+bilgisayara zaten önceden kurulmuştur!)
+
+[ADIM ADIM NASIL KULLANILIR?]
+1. Yetkili, anticheat.ac panelinden (Dashboard) 8 haneli tarama PIN'i
+   oluşturur ve oyuncuya verir.
+2. Oyuncu tarayıcıdan anticheat.ac/tr/downloads sayfasına girip PIN'i
+   yazar ve Windows sürümünü indirir.
+3. İnen Ocean tarayıcısını Yönetici olarak çalıştırır.
+   (Tarama sırasında Görev Yöneticisi'nden kapatılamaz; yaklaşık 60 sn sürer.)
+4. Tarama bitince rapor otomatik olarak yetkilinin Ocean paneline düşer.
+
+[RAPORDA NELERİ GÖSTERİR?]
+- Çalışan süreçler ve enjekte edilmiş gizli modüller
+- Silinmiş dosyalar, zaman çizelgesi (Forensic Timeline)
+- İz temizleme / manipülasyon skoru (Cleaning Score)
+- Alternatif hesap (Alt) eşleşmeleri ve kesin/şüpheli bulgular
+
+[İPUCU]
+Otomatik tarayıcılar (Ocean / Echo) çok hızlıdır ama %100 her yeni veya
+özel hileyi tek başına yakalamayabilir; en sağlam SS yöntemi Ocean
+taramasının ardından Hollows Hunter, Process Hacker, MFT, SRUM ve
+Amcache ile manuel doğrulama yapmaktır.
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

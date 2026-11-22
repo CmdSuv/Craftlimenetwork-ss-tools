@@ -1,0 +1,56 @@
+﻿========================================================================
+14. RAWCOPY + SRUMECMD (SRUDB.DAT - İNTERNET VE ÇALIŞMA FATURASI)
+SEVİYE: ÇOK GÜÇLÜ (SRUDB.DAT - 30-60 GÜNLÜK İNTERNET/ÇALIŞMA FATURASI)
+========================================================================
+KONUMU:
+- C:\SS_Tools\RawCopy64.exe
+- C:\SS_Tools\net\SrumECmd.exe  (PATH'e eklidir, her yerden çalışır)
+
+[NE İŞE YARAR?]
+Windows arka planda 30-60 gün boyunca hangi .exe dosyasının internetten
+kaç byte veri gönderip aldığını ve kaç dakika çalıştığını SRUDB.dat
+veritabanına kaydeder. Oyuncu hileyi silse, Prefetch ve Journal'ı
+temizlese bile bu fatura kalır. Dosya Windows tarafından kilitli olduğu
+için önce RawCopy64 ile kopyalanır, sonra SrumECmd ile CSV'ye çevrilir.
+
+[ADIM ADIM KOMUTLAR (YÖNETİCİ CMD)]
+1. Klasöre geç:
+   cd /d C:\SS_Tools
+
+2. Kilitli SRUDB.dat dosyasını Cikti klasörüne kopyala:
+   RawCopy64.exe /FileNamePath:C:\Windows\System32\sru\SRUDB.dat /OutputPath:C:\SS_Tools\Cikti
+
+3. Veritabanını okunabilir CSV raporlarına çevir:
+   SrumECmd.exe -f "C:\SS_Tools\Cikti\SRUDB.dat" --csv "C:\SS_Tools\Cikti"
+
+[TIMELINE EXPLORER İLE NASIL İNCELENİR?]
+1. 02_Adli_Bilisim_Araclari -> TimelineExplorer kısayolunu aç.
+2. File -> Open -> C:\SS_Tools\Cikti içine gir.
+3. "..._SrumECmd_NetworkUsages_Output.csv" dosyasını aç
+   (İstersen çalışma süresi için "..._AppResourceUseInfo_Output.csv" de aç).
+4. "ExeInfo" veya "AppId" sütununun altındaki arama kutusuna sırayla yaz:
+   - Temp
+   - Downloads
+   - AppData
+   - Desktop
+
+[NE ÇIKARSA KESİN HİLE / MANİPÜLASYONDUR?]
+- Temp, Downloads, Desktop veya AppData'dan çalışmış şüpheli bir .exe
+  görünüyor ve sağında BytesSent / BytesReceived (veri trafiği) varsa:
+  -> Hile indiren veya lisans doğrulayan HİLE LOADER'ıdır (%100 KANIT,
+     dosya diskten silinmiş olsa bile yakalanır).
+- Tabloda sadece son 5-10 dakikanın kaydı varsa, önceki günler bomboşsa:
+  -> Oyuncu SS öncesi SRUM veritabanını temizlemiş (%100 MANİPÜLASYON).
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================
