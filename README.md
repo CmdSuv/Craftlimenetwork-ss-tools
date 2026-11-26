@@ -1,5 +1,9 @@
 # CraftlimeNetwork SS Tools
 
+[![Hemen İndir (Son Sürüm)](https://img.shields.io/badge/HEMEN_%C4%B0ND%C4%B0R-CraftlimeNetwork--SS--Tools.zip_(Son_S%C3%BCr%C3%BCm)-65a30d?style=for-the-badge)](https://github.com/CmdSuv/Craftlimenetwork-ss-tools/releases/latest/download/CraftlimeNetwork-SS-Tools.zip)
+
+> **Tek tıkla otomatik indirme:** [CraftlimeNetwork-SS-Tools.zip (Son Sürüm)](https://github.com/CmdSuv/Craftlimenetwork-ss-tools/releases/latest/download/CraftlimeNetwork-SS-Tools.zip)
+
 Minecraft sunucu yetkilileri için hazırlanmış **kapsamlı Screenshare (SS) ve Adli Bilişim Kontrol Araçları & Adım Adım Türkçe Rehber Paketi**.
 
 Bu depo; temel yüzeysel dosya/tarayıcı kontrollerinden başlayarak **NTFS `$MFT`**, **`$UsnJrnl` (USN Journal)**, **`SRUDB.dat`**, **`Amcache / BAM`**, **canlı RAM string analizi** ve **fileless (dosyasız) bellek enjeksiyonu tespitine** kadar 17 aracı kontrol gücüne göre sıralı şekilde, **taşınabilir (kurulumsuz)** olarak bir araya getirir.
