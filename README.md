@@ -40,29 +40,6 @@ Craftlimenetwork-ss-tools/
 
 ---
 
-## Araç Listesi (Kontrol Gücüne Göre: `01 → 17`)
-
-| # | Araç | Seviye | Nasıl Çalıştırılır? | Rehber |
-|---|---|---|---|---|
-| **01** | **Ocean Anti-Cheat** | Başlangıç (Otomatik) | Panelden alınan 8 haneli PIN ile | [REHBER.txt](Araclar/01_Ocean_AntiCheat/REHBER.txt) |
-| **02** | **AnyDesk** | Temel | `AnyDesk.exe` | [REHBER.txt](Araclar/02_AnyDesk/REHBER.txt) |
-| **03** | **Everything** | Temel | `everything.exe` (Yönetici) | [REHBER.txt](Araclar/03_Everything/REHBER.txt) |
-| **04** | **BrowsingHistoryView** | Temel | `BrowsingHistoryView.exe` | [REHBER.txt](Araclar/04_BrowsingHistoryView/REHBER.txt) |
-| **05** | **WebBrowserDownloadsView** | Temel–Orta | `BrowserDownloadsView.exe` | [REHBER.txt](Araclar/05_WebBrowserDownloadsView/REHBER.txt) |
-| **06** | **USBDriveLog** | Temel–Orta | `USBDriveLog.exe` (Yönetici) | [REHBER.txt](Araclar/06_USBDriveLog/REHBER.txt) |
-| **07** | **ComputerActivityView** | Orta | `LastActivityView.exe` (Yönetici) | [REHBER.txt](Araclar/07_ComputerActivityView/REHBER.txt) |
-| **08** | **WinPrefetchView** | Orta | `WinPrefetchView.exe` (Yönetici) | [REHBER.txt](Araclar/08_WinPrefetchView/REHBER.txt) |
-| **09** | **PrivaZer Shellbag** | Orta | `PrivaZer_Shellbag_Analyzer.exe` (Yönetici) | [REHBER.txt](Araclar/09_PrivaZer_Shellbag/REHBER.txt) |
-| **10** | **Event Viewer** | Orta–İleri | `Event_Viewer_Ac.bat` | [REHBER.txt](Araclar/10_Event_Viewer/REHBER.txt) |
-| **11** | **Journal Tool** | İleri | `journal-tool.exe` (Yönetici) | [REHBER.txt](Araclar/11_Journal_Tool/REHBER.txt) |
-| **12** | **Timeline Explorer** | İleri | `TimelineExplorer_Ac.bat` *(tek tık kur + aç)* | [REHBER.txt](Araclar/12_Timeline_Explorer/REHBER.txt) |
-| **13** | **AmcacheParser & BAM** | İleri | `Amcache_Taramasi_Baslat.bat` & `BAM_Regedit_Ac.bat` | [REHBER.txt](Araclar/13_AmcacheParser_ve_BAM/REHBER.txt) |
-| **14** | **RawCopy & SrumECmd** | Çok Güçlü | `SRUM_Taramasi_Baslat.bat` | [REHBER.txt](Araclar/14_RawCopy_ve_SrumECmd/REHBER.txt) |
-| **15** | **MFTECmd (`$MFT`)** | Çok Güçlü | `MFT_Taramasi_Baslat.bat` | [REHBER.txt](Araclar/15_MFTECmd_MFT/REHBER.txt) |
-| **16** | **Process Hacker 2.39** | Uzman | `Process_Hacker_2_Ac.bat` | [REHBER.txt](Araclar/16_Process_Hacker_2/REHBER.txt) |
-| **17** | **Hollows Hunter** | En Güçlü / Zirve | `Hollows_Hunter_CMD.bat` | [REHBER.txt](Araclar/17_Hollows_Hunter/REHBER.txt) |
-
----
 
 ## 3 Adımda Kullanım (Windows 10 / 11 x64)
 
