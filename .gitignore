@@ -1,7 +1,6 @@
-# Gecici ciktilar ve yerel ayar dosyalari
 *.cfg
-01_Canli_RAM_ve_Surec/Hollows_Hunter/hollows_hunter.dumps/
-02_Adli_Bilisim_Araclari/Cikti/*
-!02_Adli_Bilisim_Araclari/Cikti/.gitkeep
-02_Adli_Bilisim_Araclari/TimelineExplorer/
-02_Adli_Bilisim_Araclari/*.zip
+Cikti/*
+!Cikti/.gitkeep
+Araclar/12_Timeline_Explorer/bin/
+Araclar/12_Timeline_Explorer/*.zip
+Araclar/17_Hollows_Hunter/hollows_hunter.dumps/

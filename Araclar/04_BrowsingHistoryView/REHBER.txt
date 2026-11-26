@@ -1,0 +1,44 @@
+﻿========================================================================
+04. BROWSING HISTORY VIEW (TÜM TARAYICILARIN GEÇMİŞİ TEK EKRANDA)
+SEVİYE: TEMEL (TARAYICI GEÇMİŞİ)
+========================================================================
+KONUMU:
+- Araclar\04_BrowsingHistoryView\BrowsingHistoryView.exe
+
+[NE İŞE YARAR?]
+Chrome, Opera, Opera GX, Edge, Firefox, Brave gibi bilgisayarda kurulu
+TÜM tarayıcıların ziyaret geçmişini tek bir listede toplar. Oyuncunun
+gizli tutmaya çalıştığı ikinci bir tarayıcıdan (örn. Edge veya Opera)
+hile sitesine girip girmediğini anında gösterir.
+
+[ADIM ADIM KULLANIM]
+1. BrowsingHistoryView.exe'yi aç.
+2. Açılan başlangıç penceresinde:
+   - "Load history from the last:" kısmını ihtiyaca göre seç (örn. 7 veya
+     10 gün — hızlı açılır; daha derin bakacaksan 30 gün).
+   - Tüm tarayıcı kutucuklarının işaretli olduğundan emin ol -> OK.
+3. Liste gelince "Visit Time" sütununa göre yeniden eskiye sırala.
+4. Ctrl + F ile şüpheli kelimeleri arat:
+   - vape, slinky, drip, doomsday, entropy, prestige, meteor, wurst,
+     impact, autoclicker, ghost client, cheat, bypass, mediafire,
+     dosya.co, mega.nz, github
+
+[NE ÇIKARSA ŞÜPHELİ / MANİPÜLASYON?]
+- Hile satış, panel, lisans girişi veya indirme sitelerine (vape.gg,
+  slinky.gg, drip.gg vb.) SS öncesinde giriş yapılmış olması.
+- Tarayıcı geçmişi tamamen boşsa veya sadece son birkaç dakikayı
+  gösteriyorsa -> Oyuncu geçmişi temizlemiştir (WebBrowserDownloadsView,
+  Process Hacker Dnscache ve MFTECmd ile çapraz kontrol yap!).
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

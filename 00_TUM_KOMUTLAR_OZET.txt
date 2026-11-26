@@ -1,0 +1,62 @@
+﻿========================================================================
+00. CRAFTLIMENETWORK SS TOOLS - HIZLI BAŞLANGIÇ VE KOMUT ÖZETİ (01 -> 17)
+========================================================================
+KLASÖR DÜZENİ:
+  Araclar\01..17  -> Her araç kendi numaralı klasöründe + içinde REHBER.txt!
+  Cikti\          -> Amcache, SRUM ve MFT CSV raporlarının toplandığı tek klasör!
+  VirusTotal.url  -> SHA-1 parmak izi doğrulama (tek internet kısayolu)
+
+SIRALAMA MANTIĞI (01 -> 17):
+  01. Ocean Anti-Cheat           [Otomatik Hızlı Tarama - Sabit 1. Sıra]
+  02. AnyDesk                    [Temel - Uzaktan Bağlantı]
+  03. Everything                 [Temel - Anlık Dosya Arama]
+  04. BrowsingHistoryView        [Temel - Tarayıcı Geçmişi]
+  05. WebBrowserDownloadsView    [Temel-Orta - İndirme Geçmişi]
+  06. USBDriveLog                [Temel-Orta - USB Takma/Çıkarma]
+  07. ComputerActivityView       [Orta - Kronolojik Aktivite Özeti]
+  08. WinPrefetchView            [Orta - Prefetch Çalıştırma Geçmişi]
+  09. PrivaZer Shellbag          [Orta - Silinmiş Klasör Geçmişi]
+  10. Event Viewer               [Orta-İleri - Event_Viewer_Ac.bat]
+  11. Journal Tool               [İleri - NTFS USN Journal]
+  12. Timeline Explorer          [İleri - TimelineExplorer_Ac.bat (CSV okuyucu)]
+  13. AmcacheParser & BAM        [İleri - Amcache_Taramasi_Baslat.bat + BAM_Regedit_Ac.bat]
+  14. RawCopy & SrumECmd         [Çok Güçlü - SRUM_Taramasi_Baslat.bat]
+  15. MFTECmd ($MFT)             [Çok Güçlü - MFT_Taramasi_Baslat.bat]
+  16. Process Hacker 2.39        [Uzman - Process_Hacker_2_Ac.bat]
+  17. Hollows Hunter             [EN GÜÇLÜ - Hollows_Hunter_CMD.bat]
+
+========================================================================
+TEK TIKLA ÇALIŞTIRILAN OTOMATİK ARAÇLAR (KOMUT YAZMAYA GEREK YOK!)
+========================================================================
+- [10] Olay Görüntüleyicisi : Araclar\10_Event_Viewer\Event_Viewer_Ac.bat
+       Sistem Filtre: 104, 7036, 1074  |  Güvenlik Filtre: 1102, 4616
+- [12] Timeline Explorer    : Araclar\12_Timeline_Explorer\TimelineExplorer_Ac.bat
+       (İlk açılışta .NET 10 + TimelineExplorer + Intel CET düzeltmesini otomatik kurar!)
+- [13] Amcache + BAM        : Araclar\13_AmcacheParser_ve_BAM\Amcache_Taramasi_Baslat.bat
+                              Araclar\13_AmcacheParser_ve_BAM\BAM_Regedit_Ac.bat
+- [14] SRUM (SRUDB.dat)     : Araclar\14_RawCopy_ve_SrumECmd\SRUM_Taramasi_Baslat.bat
+- [15] MFT (C:\$MFT)        : Araclar\15_MFTECmd_MFT\MFT_Taramasi_Baslat.bat
+- [16] Process Hacker 2     : Araclar\16_Process_Hacker_2\Process_Hacker_2_Ac.bat
+- [17] Hollows Hunter       : Araclar\17_Hollows_Hunter\Hollows_Hunter_CMD.bat
+
+HOLLOWS HUNTER KOMUTLARI (Hollows_Hunter_CMD.bat içinden):
+  Sadece Minecraft (hızlı)   : hollows_hunter64.exe /pname javaw.exe /shellc 1
+  Sadece Minecraft (detaylı) : hollows_hunter64.exe /pname javaw.exe /shellc 3 /hooks
+  javaw + java birlikte      : hollows_hunter64.exe /pname javaw.exe;java.exe /shellc 1 /hooks
+  Tüm bilgisayar             : hollows_hunter64.exe /shellc 1 /hooks
+
+MANUEL SHA-1 ÇIKARMA:
+  certutil -hashfile "DOSYA_YOLU" SHA1
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

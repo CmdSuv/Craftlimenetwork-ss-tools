@@ -1,0 +1,47 @@
+﻿========================================================================
+12. TIMELINE EXPLORER (CSV RAPORLARINI HIZLI ANALİZ ARAYÜZÜ)
+SEVİYE: İLERİ (ADLİ BİLİŞİM CSV ANALİZ ARAYÜZÜ)
+========================================================================
+KONUMU:
+- Araclar\12_Timeline_Explorer\TimelineExplorer_Ac.bat
+  (İlk çalıştırmada TimelineExplorer + .NET 10 Desktop Runtime'ı otomatik
+  indirir ve Intel 12. nesil+ CET 0x80131506 çökme düzeltmesini uygular;
+  sonraki çalıştırmalarda doğrudan açılır.)
+
+[NE İŞE YARAR?]
+SrumECmd, MFTECmd ve AmcacheParser'ın ürettiği yüz binlerce satırlık
+CSV tablolarını Excel gibi kasmadan saniyeler içinde açar ve her sütun
+altından anlık filtreleme yapmanı sağlar.
+
+[ADIM ADIM KULLANIM]
+1. Araclar\12_Timeline_Explorer\TimelineExplorer_Ac.bat dosyasına
+   çift tıkla (ilk seferde internetten otomatik kurulup açılır).
+2. Sol üst: File -> Open -> Cikti klasöründeki
+   CSV dosyasını seç (veya CSV dosyasını doğrudan pencerenin içine sürükle).
+   (Birden fazla CSV'yi aynı anda farklı sekmelerde açabilirsin.)
+3. SÜTUN FİLTRELEME:
+   Her sütun başlığının hemen altındaki boş kutucuğa arama kelimesini yaz:
+   - MFT (mft_rapor.csv):
+     InUse = False  |  Extension = .exe veya .jar veya .dll
+   - SRUM (NetworkUsages / AppResourceUseInfo):
+     ExeInfo = Temp  |  Downloads  |  Desktop  |  AppData
+   - Amcache (UnassociatedFileEntries):
+     FullPath = Downloads  |  Temp  |  Desktop  (sonra SHA1 kopyala)
+4. GENEL ARAMA:
+   Sağ üstteki "Find" kutusu tüm tablodaki bütün sütunlarda arama yapar.
+5. SIRALAMA:
+   Tarih/saat sütununun başlığına tıklayarak en yeniden en eskiye sırala;
+   böylece SS'ten hemen önceki 5-15 dakikadaki hareketleri en üstte görürsün.
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

@@ -1,0 +1,45 @@
+﻿========================================================================
+09. PRIVAZER SHELLBAG ANALYZER (SİLİNMİŞ KLASÖR GEÇMİŞİ ANALİZİ)
+SEVİYE: ORTA (SİLİNMİŞ KLASÖR / SHELLBAGS)
+========================================================================
+KONUMU:
+- Araclar\09_PrivaZer_Shellbag\PrivaZer_Shellbag_Analyzer.exe
+
+[NE İŞE YARAR?]
+Windows Dosya Gezgini'nde açtığın her klasörün pencere boyutunu ve
+görünüm ayarını "Shellbags" olarak kayıt defterinde saklar.
+Oyuncu "Masaüstü\Hilelerim" veya "E:\Vape" klasörünü tamamen silse,
+hatta USB belleği çıkarıp atsa bile, o klasörün var olduğu ve açıldığı
+Shellbag kayıtlarında kalır!
+
+[ADIM ADIM KULLANIM]
+1. PrivaZer_Shellbag_Analyzer.exe'yi SAĞ TIKLA -> "Yönetici olarak çalıştır".
+2. Açılan ekranda "Analyze" (Analiz Et) butonuna tıkla.
+3. ÖNEMLİ UYARI: Asla "Clean" (Temizle) butonuna BASMA! Biz sadece
+   ANALİZ (inceleme) için kullanıyoruz!
+4. Listede özellikle şu kategorilere bak:
+   - "Deleted" / Silinmiş klasörler (kırmızı veya silinmiş işaretiyle görünür):
+     Silinmiş bir "cheat", "vape", "client", "mods_backup", "inject" vb.
+     klasör adı var mı?
+   - Çıkarılabilir sürücüler (D:\, E:\, F:\):
+     USB bellek içinden açılmış hile klasörleri burada görünür.
+   - Arşiv içi (.zip / .rar):
+     Doğrudan ZIP içinden açılan klasörler de Shellbags'e düşer!
+
+[NE ÇIKARSA ŞÜPHELİ / KESİN?]
+- Silinmiş klasörler arasında hile adıyla açılmış klasör veya USB'den
+  açılıp çıkarılmış şüpheli klasör -> Çok güçlü kanıt (Journal + MFT
+  ile birlikte kesinleştirilir).
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

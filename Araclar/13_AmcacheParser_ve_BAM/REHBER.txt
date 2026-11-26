@@ -1,0 +1,70 @@
+﻿========================================================================
+13. AMCACHEPARSER & BAM (ÇALIŞTIRMA SAATİ VE SHA-1 PARMAK İZİ)
+SEVİYE: İLERİ (BAM SAATİ + AMCACHE SHA-1 & VIRUSTOTAL)
+========================================================================
+KONUMU:
+- Araclar\13_AmcacheParser_ve_BAM\bin\RawCopy64.exe
+- Araclar\13_AmcacheParser_ve_BAM\bin\AmcacheParser.exe
+- Amcache_Taramasi_Baslat.bat (1 tıkla Yönetici CMD)
+- BAM için kurulum gerekmez (Windows Kayıt Defteri / regedit)
+
+[NE İŞE YARAR?]
+Oyuncunun "Ben o dosyayı sadece indirdim, hiç açmadım" veya "O Discord'du"
+bahanelerini tamamen çürütür:
+- BAM     : Bir .exe'nin hangi gün, saat ve saniyede ÇALIŞTIRILDIĞINI gösterir.
+- Amcache : Dosyanın adı değiştirilse (örn. discord.exe yapılsa) ve silinse
+            bile değişmeyen SHA-1 parmak izini, Orijinal Dosya Adını
+            (OriginalFileName) ve Yayıncıyı (Publisher) saklar.
+
+[A) AMCACHE KONTROLÜ - YÖNETİCİ CMD]
+NOT: AmcacheParser için .NET 10 Desktop Runtime gerekir (yoksa önce
+     Araclar\12_Timeline_Explorer\TimelineExplorer_Ac.bat çalıştırın).
+
+1. EN KOLAY YOL: Amcache_Taramasi_Baslat.bat dosyasına
+   çift tıkla (Yönetici CMD doğrudan doğru klasörde açılır!).
+
+   (VEYA manuel Yönetici CMD açtıysan İndirilenler'deki klasöre geç:)
+   for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*13_AmcacheParser_ve_BAM\bin"') do cd /d "%i"
+
+2. Kilitli Amcache.hve dosyasını Cikti klasörüne kopyala:
+   RawCopy64.exe /FileNamePath:C:\Windows\AppCompat\Programs\Amcache.hve /OutputPath:"..\..\..\Cikti"
+
+3. CSV tablolarına çevir:
+   AmcacheParser.exe -f "%CD%\Cikti\Amcache.hve" --csv "..\..\..\Cikti"
+
+4. TimelineExplorer -> File -> Open -> Cikti içinden aç:
+   "..._UnassociatedFileEntries.csv"
+   - "FullPath" sütununda Downloads, Temp, Desktop ara.
+   - Şüpheli dosyanın "Publisher" (imza) ve "OriginalFileName" sütununa bak.
+   - "SHA1" kodunu kopyala -> ana klasördeki VirusTotal.url kısayolunu aç ->
+     Search sekmesine yapıştır!
+     * Details -> Names kısmında dosyanın gerçek bilinen isimleri çıkar.
+     * Gerçek Chrome/Discord ise "Verified" imzalı ve 0/70 temiz çıkar.
+     * Adı chrome.exe/discord.exe olup VirusTotal'de "No matches found"
+       çıkıyorsa hash değiştirilmiş veya private hile olabilir (büyük şüphe!).
+
+[B) BAM KONTROLÜ - KAYIT DEFTERİ]
+1. Bu klasördeki BAM_Regedit_Ac.bat dosyasına çift tıkla (doğrudan BAM yolunu açar!)
+   (VEYA manuel: Win + R -> regedit -> Enter.)
+2. En üstteki adres çubuğuna aynen yapıştır -> Enter:
+   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\bam\State\UserSettings
+3. Sol menüde "S-1-5-21-..." ile başlayan uzun kullanıcı klasörüne tıkla.
+4. Sağ pencerede çalıştırılmış tüm .exe dosyaları listelenir.
+
+[NE ÇIKARSA KESİN HİLE / MANİPÜLASYONDUR?]
+- BAM'da Downloads/Temp/Desktop içinden çalışmış şüpheli .exe -> Kesin açmış.
+- BAM klasörü tamamen boşsa -> Kayıt defteri silinmiş (%100 MANİPÜLASYON).
+- Amcache SHA-1 VirusTotal'de hile/autoclicker/loader olarak çıkıyorsa -> %100 HİLE.
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

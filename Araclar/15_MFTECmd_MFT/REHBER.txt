@@ -1,0 +1,64 @@
+﻿========================================================================
+15. MFTECMD ($MFT - SİLİNEN TÜM DOSYALAR, TARİH HİLESİ VE WIPE TESPİTİ)
+SEVİYE: ÇOK GÜÇLÜ (C:\$MFT - SİLİNENLER, TIMESTOMP, DİSK WIPE)
+========================================================================
+KONUMU:
+- Araclar\15_MFTECmd_MFT\bin\MFTECmd.exe
+- MFT_Taramasi_Baslat.bat (1 tıkla Yönetici CMD)
+
+[NE İŞE YARAR?]
+Windows diskinin kalbi olan NTFS ana dosya tablosunu (C:\$MFT) okur.
+Kullanıcı modunda silinmesi imkansızdır. Oyuncu hileyi Shift+Delete ile
+silse, Geri Dönüşüm Kutusunu boşaltsa veya iz temizleyici kullansa bile;
+silinen dosyanın adını, hangi klasörde durduğunu ve gerçek oluşturulma
+tarihini ortaya çıkarır.
+
+[ADIM ADIM KOMUTLAR (YÖNETİCİ CMD)]
+NOT: MFTECmd için .NET 10 Desktop Runtime gerekir (yoksa önce
+     Araclar\12_Timeline_Explorer\TimelineExplorer_Ac.bat çalıştırın).
+
+1. EN KOLAY YOL: MFT_Taramasi_Baslat.bat dosyasına
+   çift tıkla (Yönetici CMD doğrudan doğru klasörde açılır!).
+
+   (VEYA manuel Yönetici CMD açtıysan İndirilenler'deki klasöre geç:)
+   for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*15_MFTECmd_MFT\bin"') do cd /d "%i"
+
+2. Tüm $MFT tablosunu CSV'ye dök (disk hızına göre 15-40 saniye sürer):
+   MFTECmd.exe -f "C:\$MFT" --csv "..\..\..\Cikti" --csvf mft_rapor.csv
+
+[TIMELINE EXPLORER İLE NASIL İNCELENİR?]
+1. Araclar\12_Timeline_Explorer\TimelineExplorer_Ac.bat -> File -> Open
+   -> Cikti\mft_rapor.csv
+2. SİLİNMİŞ DOSYALARI FİLTRELE:
+   - "InUse" sütunu altındaki kutuya yaz:  False
+     (Sadece diskten silinmiş dosyaları gösterir.)
+3. UZANTI FİLTRELE:
+   - "Extension" sütunu altındaki kutuya sırayla yaz:
+     .exe   |   .jar   |   .dll
+   - "FileName" ve "ParentPath" sütunlarından silinen dosyanın adını ve
+     hangi klasörden silindiğini gör.
+
+[EK İLERİ DÜZEY KONTROLLER]
+1) TARİH HİLESİ (TIMESTOMP) KONTROLÜ:
+   - "Created0x10" ($STANDARD_INFORMATION) ile "Created0x30" ($FILE_NAME)
+     sütunlarını karşılaştır.
+   - Oyuncu dosyanın tarihini geriye aldıysa 0x10 değişir ama çekirdek
+     kaydı olan 0x30 değişmez! Arada fark varsa TARİH HİLESİ yapılmıştır.
+   - Ayrıca "Timestomped" sütunu işaretli satırlara bak.
+
+2) BOŞ ALAN TEMİZLEME (WIPE / CCLEANER) KONTROLÜ:
+   - Listede binlerce "00000000.TMP", "ZZZZZZ" veya anlamsız rastgele
+     isimli dosya görüyorsan oyuncu disk wipe işlemi yapmıştır (%100 manipülasyon).
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

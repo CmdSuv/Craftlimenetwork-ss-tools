@@ -1,0 +1,52 @@
+﻿========================================================================
+10. EVENT VIEWER / OLAY GÖRÜNTÜLEYİCİSİ (MANİPÜLASYON & İZ SİLME)
+SEVİYE: ORTA-İLERİ (OLAY GÜNLÜKLERİ & MANİPÜLASYON)
+========================================================================
+KONUMU:
+- Windows'un kendi yerleşik aracıdır (kurulum gerekmez).
+
+[NE İŞE YARAR?]
+Oyuncu SS öncesinde olay kayıtlarını temizlediyse, SRUM/Prefetch
+servislerini durdurduysa, RAM temizlemek için bilgisayarı yeniden
+başlattıysa veya dosya tarihlerini kandırmak için sistem saatini geri
+aldıysa Windows bunların hepsini Event Viewer'a kaydeder.
+
+[ADIM ADIM KULLANIM]
+1. Bu klasördeki Event_Viewer_Ac.bat dosyasına çift tıkla
+   (veya Win + R -> eventvwr.msc -> Enter).
+
+A) SİSTEM GÜNLÜKLERİ:
+2. Sol menü: Windows Günlükleri -> "Sistem" (System) üzerine tıkla.
+3. Sağ menüden "Geçerli Günlüğü Filtrele..." (Filter Current Log) tıkla.
+4. "<Tüm Olay Kimlikleri>" kutusuna tam olarak şunu yaz -> Tamam:
+   104, 7036, 1074
+
+B) GÜVENLİK GÜNLÜKLERİ:
+5. Sol menü: Windows Günlükleri -> "Güvenlik" (Security) üzerine tıkla.
+6. Sağdan tekrar "Geçerli Günlüğü Filtrele..." tıkla.
+7. Olay Kimlikleri kutusuna şunu yaz -> Tamam:
+   1102, 4616
+
+[OLAY KODLARI NE ANLAMA GELİR?]
+- 104  (Sistem)   : "Olay günlüğü temizlendi" -> %100 MANİPÜLASYON KANITI.
+- 1102 (Güvenlik) : "Denetim günlüğü temizlendi" -> %100 MANİPÜLASYON KANITI.
+- 7036 (Sistem)   : Bir hizmet durduruldu/başlatıldı. Açıklamada SS saatine
+  yakın "Diagnostic Policy Service" (SRUM), "SysMain" (Prefetch) veya
+  "DiagTrack" durduruldu yazıyorsa -> İz silme girişimi (%100 KANIT).
+- 1074 (Sistem)   : Bilgisayar yeniden başlatıldı / kapatıldı. Kontrolden
+  5-10 dk önce reboot atıldıysa RAM temizlenmeye çalışılmıştır.
+- 4616 (Güvenlik) : "Sistem saati değiştirildi" -> Oyuncu tarih hilesi
+  yapmak için bilgisayarın saatini ileri/geri almıştır.
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================

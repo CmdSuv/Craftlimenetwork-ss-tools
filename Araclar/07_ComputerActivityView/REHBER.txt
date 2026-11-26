@@ -1,0 +1,43 @@
+﻿========================================================================
+07. COMPUTER ACTIVITY VIEW / LASTACTIVITYVIEW (KRONOLOJİK İŞLEM GEÇMİŞİ)
+SEVİYE: ORTA (KRONOLOJİK AKTİVİTE ÖZETİ)
+========================================================================
+KONUMU:
+- Araclar\07_ComputerActivityView\LastActivityView.exe
+
+[NE İŞE YARAR?]
+Windows'un farklı yerlerindeki izleri (Prefetch, Registry, Open/Save
+diyalogları, Shellbags, Event Log vb.) tek bir zaman çizelgesinde toplar.
+Oyuncunun dakika dakika ne yaptığını (hangi klasöre girdi, hangi .exe'yi
+açtı, ne zaman bilgisayar kapandı/uykuya geçti, hangi program çöktü)
+en hızlı genel bakış olarak gösterir.
+
+[ADIM ADIM KULLANIM]
+1. LastActivityView.exe'ye SAĞ TIKLA -> "Yönetici olarak çalıştır".
+2. "Action Time" sütunu varsayılan olarak en yeniden eskiye sıralıdır.
+3. Ctrl + F ile arama yapabilirsin (ör. .exe, .jar, Downloads, Temp,
+   cmd, powershell, cleaner, usb).
+4. Özellikle şu olay türlerine ("Description" sütunu) dikkat et:
+   - "Run .EXE file"        : Çalıştırılan programlar
+   - "Open file or folder"  : Açılan klasör ve dosyalar
+   - "Select file in open/save dialog" : Bir hile enjektörü veya launcher
+     üzerinden dosya seçildiyse burada dosya yolu görünür!
+   - "Software Crash"       : Hile veya enjektör çöktüyse adı düşer.
+   - "System Started / Shutdown" : SS öncesi restart atılmış mı görünür.
+
+[İPUCU]
+- Hızlı ön tarama için mükemmeldir; burada şüpheli bir saat veya dosya
+  gördüğünde MFTECmd, Amcache ve Journal-Tool ile derinleştirirsin.
+
+========================================================================
+LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
+------------------------------------------------------------------------
+Yazar  : Omar Yiğitcan Mengü
+GitHub : https://github.com/CmdSuv
+
+- KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
+- DEĞİŞTİRİLEMEZ : İçerik değiştirilemez, düzenlenemez, sahiplenilemez.
+- SATILAMAZ      : Ticari amaçla kullanılamaz, ücretli satılamaz.
+- ZORUNLU ŞART   : Bu lisans bildirimi ne olursa olsun dosyadan
+                   çıkarılamaz; dosya içinde eksiksiz kalmak zorundadır.
+========================================================================
