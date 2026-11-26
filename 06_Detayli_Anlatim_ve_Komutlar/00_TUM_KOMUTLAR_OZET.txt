@@ -27,34 +27,51 @@ SIRALAMA MANTIĞI:
 ========================================================================
 HIZLI KOPYALA / YAPIŞTIR KOMUTLARI (YÖNETİCİ CMD)
 ========================================================================
-HER KOMUT ÖNCESİ İLK SATIR:
-cd /d C:\SS_Tools
+EN KOLAY YOL (KLASÖR YAZMADAN):
+- Adli bilişim komutları [13-15] için:
+  02_Adli_Bilisim_Araclari\Adli_Bilisim_CMD.bat dosyasına ÇİFT TIKLA!
+- Hollows Hunter [17] için:
+  01_Canli_RAM_ve_Surec\Hollows_Hunter\Hollows_Hunter_CMD.bat dosyasına ÇİFT TIKLA!
 
+MANUEL CMD İLE İNDİRİLENLER KLASÖRÜNE GEÇMEK İSTERSEN:
+(GitHub'dan İndirilenler'e inen klasör adı ne olursa olsun otomatik bulur!)
+
+Adli bilişim klasörüne geç [13, 14, 15]:
+for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*02_Adli_Bilisim_Araclari"') do cd /d "%i"
+
+Hollows Hunter klasörüne geç [17]:
+for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*Hollows_Hunter"') do cd /d "%i"
+
+------------------------------------------------------------------------
 [10] EVENT VIEWER (Win + R):
 eventvwr.msc
   Sistem Filtre:   104, 7036, 1074
   Güvenlik Filtre: 1102, 4616
 
-[13] AMCACHE + BAM:
-RawCopy64.exe /FileNamePath:C:\Windows\AppCompat\Programs\Amcache.hve /OutputPath:C:\SS_Tools\Cikti
-AmcacheParser.exe -f "C:\SS_Tools\Cikti\Amcache.hve" --csv "C:\SS_Tools\Cikti"
+[12] TIMELINE EXPLORER (CSV Görüntüleyici):
+  02_Adli_Bilisim_Araclari\TimelineExplorer_Kur_ve_Ac.bat (çift tıkla)
+
+[13] AMCACHE + BAM (02_Adli_Bilisim_Araclari içindeyken):
+RawCopy64.exe /FileNamePath:C:\Windows\AppCompat\Programs\Amcache.hve /OutputPath:"%CD%\Cikti"
+AmcacheParser.exe -f "%CD%\Cikti\Amcache.hve" --csv "%CD%\Cikti"
 BAM (Win + R -> regedit):
   HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\bam\State\UserSettings
 Manuel SHA-1:
   certutil -hashfile "DOSYA_YOLU" SHA1
 
-[14] RAWCOPY + SRUMECMD (SRUDB.dat):
-RawCopy64.exe /FileNamePath:C:\Windows\System32\sru\SRUDB.dat /OutputPath:C:\SS_Tools\Cikti
-SrumECmd.exe -f "C:\SS_Tools\Cikti\SRUDB.dat" --csv "C:\SS_Tools\Cikti"
+[14] RAWCOPY + SRUMECMD (02_Adli_Bilisim_Araclari içindeyken):
+RawCopy64.exe /FileNamePath:C:\Windows\System32\sru\SRUDB.dat /OutputPath:"%CD%\Cikti"
+SrumECmd.exe -f "%CD%\Cikti\SRUDB.dat" --csv "%CD%\Cikti"
 
-[15] MFTECMD ($MFT):
-MFTECmd.exe -f "C:\$MFT" --csv "C:\SS_Tools\Cikti" --csvf mft_rapor.csv
+[15] MFTECMD ($MFT - 02_Adli_Bilisim_Araclari içindeyken):
+MFTECmd.exe -f "C:\$MFT" --csv "%CD%\Cikti" --csvf mft_rapor.csv
 
-[16] PROCESS HACKER 2.39 (Yönetici aç):
+[16] PROCESS HACKER 2.39:
+  01_Canli_RAM_ve_Surec\Process_Hacker_2_Baslat.bat (çift tıkla -> Yönetici açılır)
   javaw.exe -> Memory -> Strings (Min: 4, Image+Mapped) -> Reach, Velocity, AutoClicker, AimAssist, Vape, .dll
   Services -> DiagTrack, PcaSvc (Filter: .exe) | Dnscache (Filter: http / .com / .gg)
 
-[17] HOLLOWS HUNTER (EN GÜÇLÜ):
+[17] HOLLOWS HUNTER (01_Canli_RAM_ve_Surec\Hollows_Hunter içindeyken):
   Sadece Minecraft (hızlı):
     hollows_hunter64.exe /pname javaw.exe /shellc 1
   Sadece Minecraft (detaylı - hook + shellcode):

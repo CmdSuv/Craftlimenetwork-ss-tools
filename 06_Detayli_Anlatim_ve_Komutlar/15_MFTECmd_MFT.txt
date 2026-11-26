@@ -3,7 +3,8 @@
 SEVİYE: ÇOK GÜÇLÜ (C:\$MFT - SİLİNENLER, TIMESTOMP, DİSK WIPE)
 ========================================================================
 KONUMU:
-- C:\SS_Tools\net\MFTECmd.exe  (PATH'e eklidir)
+- 02_Adli_Bilisim_Araclari\MFTECmd.exe
+- 02_Adli_Bilisim_Araclari\Adli_Bilisim_CMD.bat (1 tıkla Yönetici CMD)
 
 [NE İŞE YARAR?]
 Windows diskinin kalbi olan NTFS ana dosya tablosunu (C:\$MFT) okur.
@@ -13,14 +14,21 @@ silinen dosyanın adını, hangi klasörde durduğunu ve gerçek oluşturulma
 tarihini ortaya çıkarır.
 
 [ADIM ADIM KOMUTLAR (YÖNETİCİ CMD)]
-1. Klasöre geç:
-   cd /d C:\SS_Tools
+NOT: MFTECmd için .NET 10 Desktop Runtime gerekir (yoksa önce
+     02_Adli_Bilisim_Araclari\TimelineExplorer_Kur_ve_Ac.bat çalıştırın).
+
+1. EN KOLAY YOL: 02_Adli_Bilisim_Araclari\Adli_Bilisim_CMD.bat dosyasına
+   çift tıkla (Yönetici CMD doğrudan doğru klasörde açılır!).
+
+   (VEYA manuel Yönetici CMD açtıysan İndirilenler'deki klasöre geç:)
+   for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*02_Adli_Bilisim_Araclari"') do cd /d "%i"
 
 2. Tüm $MFT tablosunu CSV'ye dök (disk hızına göre 15-40 saniye sürer):
-   MFTECmd.exe -f "C:\$MFT" --csv "C:\SS_Tools\Cikti" --csvf mft_rapor.csv
+   MFTECmd.exe -f "C:\$MFT" --csv "%CD%\Cikti" --csvf mft_rapor.csv
 
 [TIMELINE EXPLORER İLE NASIL İNCELENİR?]
-1. TimelineExplorer -> File -> Open -> C:\SS_Tools\Cikti\mft_rapor.csv
+1. 02_Adli_Bilisim_Araclari\TimelineExplorer_Kur_ve_Ac.bat -> File -> Open
+   -> 02_Adli_Bilisim_Araclari\Cikti\mft_rapor.csv
 2. SİLİNMİŞ DOSYALARI FİLTRELE:
    - "InUse" sütunu altındaki kutuya yaz:  False
      (Sadece diskten silinmiş dosyaları gösterir.)
@@ -36,7 +44,7 @@ tarihini ortaya çıkarır.
      sütunlarını karşılaştır.
    - Oyuncu dosyanın tarihini geriye aldıysa 0x10 değişir ama çekirdek
      kaydı olan 0x30 değişmez! Arada fark varsa TARİH HİLESİ yapılmıştır.
-   - Ayrıca "SiFlags" / "Timestomped" işaretli satırlara bak.
+   - Ayrıca "Timestomped" sütunu işaretli satırlara bak.
 
 2) BOŞ ALAN TEMİZLEME (WIPE / CCLEANER) KONTROLÜ:
    - Listede binlerce "00000000.TMP", "ZZZZZZ" veya anlamsız rastgele

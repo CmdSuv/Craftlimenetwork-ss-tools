@@ -3,8 +3,10 @@
 SEVİYE: İLERİ (ADLİ BİLİŞİM CSV ANALİZ ARAYÜZÜ)
 ========================================================================
 KONUMU:
-- 02_Adli_Bilisim_Araclari\TimelineExplorer.lnk
-  (C:\SS_Tools\net\TimelineExplorer\TimelineExplorer.exe)
+- 02_Adli_Bilisim_Araclari\TimelineExplorer_Kur_ve_Ac.bat
+  (İlk çalıştırmada TimelineExplorer + .NET 10 Desktop Runtime'ı otomatik
+  indirir ve Intel 12. nesil+ CET 0x80131506 çökme düzeltmesini uygular;
+  sonraki çalıştırmalarda doğrudan açılır.)
 
 [NE İŞE YARAR?]
 SrumECmd, MFTECmd ve AmcacheParser'ın ürettiği yüz binlerce satırlık
@@ -12,8 +14,10 @@ CSV tablolarını Excel gibi kasmadan saniyeler içinde açar ve her sütun
 altından anlık filtreleme yapmanı sağlar.
 
 [ADIM ADIM KULLANIM]
-1. TimelineExplorer kısayoluna çift tıkla.
-2. Sol üst: File -> Open -> C:\SS_Tools\Cikti klasöründeki CSV'yi seç.
+1. 02_Adli_Bilisim_Araclari\TimelineExplorer_Kur_ve_Ac.bat dosyasına
+   çift tıkla (ilk seferde internetten otomatik kurulup açılır).
+2. Sol üst: File -> Open -> 02_Adli_Bilisim_Araclari\Cikti klasöründeki
+   CSV dosyasını seç (veya CSV dosyasını doğrudan pencerenin içine sürükle).
    (Birden fazla CSV'yi aynı anda farklı sekmelerde açabilirsin.)
 3. SÜTUN FİLTRELEME:
    Her sütun başlığının hemen altındaki boş kutucuğa arama kelimesini yaz:

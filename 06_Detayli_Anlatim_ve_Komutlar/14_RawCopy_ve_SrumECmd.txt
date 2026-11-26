@@ -3,8 +3,9 @@
 SEVİYE: ÇOK GÜÇLÜ (SRUDB.DAT - 30-60 GÜNLÜK İNTERNET/ÇALIŞMA FATURASI)
 ========================================================================
 KONUMU:
-- C:\SS_Tools\RawCopy64.exe
-- C:\SS_Tools\net\SrumECmd.exe  (PATH'e eklidir, her yerden çalışır)
+- 02_Adli_Bilisim_Araclari\RawCopy64.exe
+- 02_Adli_Bilisim_Araclari\SrumECmd.exe
+- 02_Adli_Bilisim_Araclari\Adli_Bilisim_CMD.bat (1 tıkla Yönetici CMD)
 
 [NE İŞE YARAR?]
 Windows arka planda 30-60 gün boyunca hangi .exe dosyasının internetten
@@ -14,18 +15,24 @@ temizlese bile bu fatura kalır. Dosya Windows tarafından kilitli olduğu
 için önce RawCopy64 ile kopyalanır, sonra SrumECmd ile CSV'ye çevrilir.
 
 [ADIM ADIM KOMUTLAR (YÖNETİCİ CMD)]
-1. Klasöre geç:
-   cd /d C:\SS_Tools
+NOT: SrumECmd için .NET 10 Desktop Runtime gerekir (yoksa önce
+     02_Adli_Bilisim_Araclari\TimelineExplorer_Kur_ve_Ac.bat çalıştırın).
+
+1. EN KOLAY YOL: 02_Adli_Bilisim_Araclari\Adli_Bilisim_CMD.bat dosyasına
+   çift tıkla (Yönetici CMD doğrudan doğru klasörde açılır!).
+
+   (VEYA manuel Yönetici CMD açtıysan İndirilenler'deki klasöre geç:)
+   for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*02_Adli_Bilisim_Araclari"') do cd /d "%i"
 
 2. Kilitli SRUDB.dat dosyasını Cikti klasörüne kopyala:
-   RawCopy64.exe /FileNamePath:C:\Windows\System32\sru\SRUDB.dat /OutputPath:C:\SS_Tools\Cikti
+   RawCopy64.exe /FileNamePath:C:\Windows\System32\sru\SRUDB.dat /OutputPath:"%CD%\Cikti"
 
 3. Veritabanını okunabilir CSV raporlarına çevir:
-   SrumECmd.exe -f "C:\SS_Tools\Cikti\SRUDB.dat" --csv "C:\SS_Tools\Cikti"
+   SrumECmd.exe -f "%CD%\Cikti\SRUDB.dat" --csv "%CD%\Cikti"
 
 [TIMELINE EXPLORER İLE NASIL İNCELENİR?]
-1. 02_Adli_Bilisim_Araclari -> TimelineExplorer kısayolunu aç.
-2. File -> Open -> C:\SS_Tools\Cikti içine gir.
+1. 02_Adli_Bilisim_Araclari\TimelineExplorer_Kur_ve_Ac.bat ile aç.
+2. File -> Open -> 02_Adli_Bilisim_Araclari\Cikti içine gir.
 3. "..._SrumECmd_NetworkUsages_Output.csv" dosyasını aç
    (İstersen çalışma süresi için "..._AppResourceUseInfo_Output.csv" de aç).
 4. "ExeInfo" veya "AppId" sütununun altındaki arama kutusuna sırayla yaz:

@@ -3,8 +3,9 @@
 SEVİYE: İLERİ (BAM SAATİ + AMCACHE SHA-1 & VIRUSTOTAL)
 ========================================================================
 KONUMU:
-- C:\SS_Tools\RawCopy64.exe
-- C:\SS_Tools\net\AmcacheParser.exe  (PATH'e eklidir)
+- 02_Adli_Bilisim_Araclari\RawCopy64.exe
+- 02_Adli_Bilisim_Araclari\AmcacheParser.exe
+- 02_Adli_Bilisim_Araclari\Adli_Bilisim_CMD.bat (1 tıkla Yönetici CMD)
 - BAM için kurulum gerekmez (Windows Kayıt Defteri / regedit)
 
 [NE İŞE YARAR?]
@@ -16,21 +17,27 @@ bahanelerini tamamen çürütür:
             (OriginalFileName) ve Yayıncıyı (Publisher) saklar.
 
 [A) AMCACHE KONTROLÜ - YÖNETİCİ CMD]
-1. Klasöre geç:
-   cd /d C:\SS_Tools
+NOT: AmcacheParser için .NET 10 Desktop Runtime gerekir (yoksa önce
+     02_Adli_Bilisim_Araclari\TimelineExplorer_Kur_ve_Ac.bat çalıştırın).
 
-2. Kilitli Amcache.hve dosyasını kopyala:
-   RawCopy64.exe /FileNamePath:C:\Windows\AppCompat\Programs\Amcache.hve /OutputPath:C:\SS_Tools\Cikti
+1. EN KOLAY YOL: 02_Adli_Bilisim_Araclari\Adli_Bilisim_CMD.bat dosyasına
+   çift tıkla (Yönetici CMD doğrudan doğru klasörde açılır!).
+
+   (VEYA manuel Yönetici CMD açtıysan İndirilenler'deki klasöre geç:)
+   for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*02_Adli_Bilisim_Araclari"') do cd /d "%i"
+
+2. Kilitli Amcache.hve dosyasını Cikti klasörüne kopyala:
+   RawCopy64.exe /FileNamePath:C:\Windows\AppCompat\Programs\Amcache.hve /OutputPath:"%CD%\Cikti"
 
 3. CSV tablolarına çevir:
-   AmcacheParser.exe -f "C:\SS_Tools\Cikti\Amcache.hve" --csv "C:\SS_Tools\Cikti"
+   AmcacheParser.exe -f "%CD%\Cikti\Amcache.hve" --csv "%CD%\Cikti"
 
-4. TimelineExplorer -> File -> Open -> C:\SS_Tools\Cikti içinden aç:
+4. TimelineExplorer -> File -> Open -> 02_Adli_Bilisim_Araclari\Cikti içinden aç:
    "..._UnassociatedFileEntries.csv"
    - "FullPath" sütununda Downloads, Temp, Desktop ara.
    - Şüpheli dosyanın "Publisher" (imza) ve "OriginalFileName" sütununa bak.
-   - "SHA1" kodunu kopyala -> ss kontrol araçları içindeki VirusTotal
-     linkini aç -> Search sekmesine yapıştır!
+   - "SHA1" kodunu kopyala -> ana klasördeki VirusTotal.url kısayolunu aç ->
+     Search sekmesine yapıştır!
      * Details -> Names kısmında dosyanın gerçek bilinen isimleri çıkar.
      * Gerçek Chrome/Discord ise "Verified" imzalı ve 0/70 temiz çıkar.
      * Adı chrome.exe/discord.exe olup VirusTotal'de "No matches found"

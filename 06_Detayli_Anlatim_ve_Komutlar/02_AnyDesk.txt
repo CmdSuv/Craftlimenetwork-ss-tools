@@ -20,8 +20,9 @@ araçları bizzat kendin çalıştırmanı sağlar.
 - Sadece kontrol için gerekli sistem/oyun klasörlerine ve SS araçlarına bak.
 - Oyuncunun özel sohbet, banka, fotoğraf vb. kişisel verilerine kesinlikle
   girme; her adımı ekran kaydı açıkken şeffaf şekilde yap.
-- Kontrol bittiğinde oyuncunun bilgisayarına indirdiğin SS araçlarını ve
-  C:\SS_Tools klasörünü temizleyip bağlantıyı sonlandır.
+- Kontrol bittiğinde oyuncunun bilgisayarına (İndirilenler klasörüne)
+  indirdiğin SS araç klasörünü ve Cikti dosyalarını temizleyip bağlantıyı
+  sonlandır.
 
 ========================================================================
 LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)

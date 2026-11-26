@@ -9,8 +9,9 @@ Ocean Anti-Cheat statik/tek bir .exe olarak dağıtılmaz. Her tarama için
 yetkili tarafından Ocean panelinden 8 haneli, tek kullanımlık bir PIN
 oluşturulur; oyuncu siteye o PIN'i girdiğinde o taramaya özel scanner
 dosyası anlık olarak indirilir.
-(NOT: Ocean'ın çalışması için gerekli Visual C++ Redistributable x64 bu
-bilgisayara zaten önceden kurulmuştur!)
+(NOT: Ocean çalışırken "VCRUNTIME140.dll / VC++ hatası" verirse
+Microsoft'un resmi Visual C++ Redistributable x64 paketini kurun:
+https://aka.ms/vs/17/release/vc_redist.x64.exe)
 
 [ADIM ADIM NASIL KULLANILIR?]
 1. Yetkili, anticheat.ac panelinden (Dashboard) 8 haneli tarama PIN'i

@@ -3,7 +3,7 @@
 SEVİYE: TEMEL (YÜZEYSEL DİSK ARAMA)
 ========================================================================
 KONUMU:
-- 03_Dosya_ve_Calistirma_Gecmisi\Everything\Everything.lnk
+- 03_Dosya_ve_Calistirma_Gecmisi\Everything\everything.exe
 
 [NE İŞE YARAR?]
 Windows'un NTFS indeksini okuyarak bilgisayardaki yüz binlerce dosyayı
@@ -11,26 +11,29 @@ saniyeler içinde anlık olarak arar. Gizli klasörlere, AppData'ya veya
 sistem klasörlerinin arasına saklanmış hileleri bulmak için birebirdir.
 
 [ADIM ADIM KULLANIM VE HAZIR ARAMA KOMUTLARI]
-Everything'i aç ve üstteki arama kutusuna aşağıdaki filtreleri yaz:
+1. everything.exe dosyasına SAĞ TIKLA -> "Yönetici olarak çalıştır" de
+   (NTFS disk indeksini doğrudan okuyabilmesi için Yönetici yetkisi gerekir;
+   ilk açılışta Türkçe arayüz desteklidir).
+2. Üstteki arama kutusuna aşağıdaki filtreleri yaz:
 
-1) Bugün değiştirilmiş / indirilmiş tüm Minecraft modları ve programlar:
-   .jar dm:today
-   .exe dm:today
-   .dll dm:today
+- Bugün değiştirilmiş / indirilmiş tüm Minecraft modları ve programlar:
+  .jar dm:today
+  .exe dm:today
+  .dll dm:today
 
-2) Son 3 gün içinde eklenen tüm .jar ve .exe'ler:
-   ext:jar;exe;dll dm:last3days
+- Son 3 gün içinde eklenen tüm .jar ve .exe'ler:
+  ext:jar;exe;dll dm:last3days
 
-3) Hile isimleri / anahtar kelimeleri toplu arama (| işareti "VEYA" demektir):
-   vape | slinky | drip | doomsday | autoclicker | ghost | cheat | bypass | killaura | reach
+- Hile isimleri / anahtar kelimeleri toplu arama (| işareti "VEYA" demektir):
+  vape | slinky | drip | doomsday | autoclicker | ghost | cheat | bypass | killaura | reach
 
-4) Tüm .minecraft mods ve versions klasörlerini bul (gizli alternatif dizinler dahil):
-   mods\ .jar
-   versions\ .jar
+- Tüm .minecraft mods ve versions klasörlerini bul (gizli alternatif dizinler dahil):
+  mods\ .jar
+  versions\ .jar
 
-5) Boş / garip isimli veya sadece harf-sayıdan oluşan şüpheli dosyalar:
-   "AppData" ext:exe;dll
-   "Temp" ext:exe;dll
+- Şüpheli klasörlerdeki çalıştırılabilir dosyalar:
+  "AppData" ext:exe;dll
+  "Temp" ext:exe;dll
 
 [İPUCU]
 - "Date Modified" (Değiştirilme Tarihi) sütununa tıklayarak en yeni

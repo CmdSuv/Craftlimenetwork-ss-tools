@@ -3,8 +3,8 @@
 SEVİYE: EN GÜÇLÜ / ZİRVE (FILELESS RAM, ENJEKSİYON, HOOK & SHELLCODE)
 ========================================================================
 KONUMU:
-- C:\SS_Tools\hollows_hunter64.exe
-- 01_Canli_RAM_ve_Surec\Hollows_Hunter\
+- 01_Canli_RAM_ve_Surec\Hollows_Hunter\hollows_hunter64.exe
+- 01_Canli_RAM_ve_Surec\Hollows_Hunter\Hollows_Hunter_CMD.bat (1 tıkla Yönetici CMD)
 
 [NE İŞE YARAR?]
 Oyuncu hileyi diske hiç kaydetmeden doğrudan RAM'e enjekte ettiyse
@@ -14,11 +14,13 @@ Process Hacker'dan gizlendiyse yakalar. Kelimelere bakmaz; RAM'de
 
 [ADIM ADIM NASIL KULLANILIR?]
 1. Minecraft'ın açık olduğundan emin ol (javaw.exe çalışıyor olmalı).
-2. Başlat -> "cmd" yaz -> Komut İstemi'ne SAĞ TIKLA -> "Yönetici olarak çalıştır".
-3. Klasöre geç:
-   cd /d C:\SS_Tools
+2. EN KOLAY YOL: 01_Canli_RAM_ve_Surec\Hollows_Hunter\Hollows_Hunter_CMD.bat
+   dosyasına çift tıkla (Yönetici CMD doğrudan Hollows_Hunter klasöründe açılır!).
 
-4. İhtiyaca göre komutu çalıştır:
+   (VEYA manuel Yönetici CMD açtıysan İndirilenler'deki klasöre geç:)
+   for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*Hollows_Hunter"') do cd /d "%i"
+
+3. İhtiyaca göre komutu çalıştır:
    - Sadece Minecraft hızlı tarama (günlük SS için ilk tercih):
      hollows_hunter64.exe /pname javaw.exe /shellc 1
 
@@ -38,8 +40,8 @@ Process Hacker'dan gizlendiyse yakalar. Kelimelere bakmaz; RAM'de
 - /hooks     : Bellekte fonksiyon yaması / API hook kontrolü ekler.
 
 [ÇIKAN SONUÇLAR NASIL YORUMLANIR?]
-Tarama bitince altta "SUMMARY" çıkar. Şüpheli bulgu varsa
-C:\SS_Tools\hollows_hunter.dumps\process_<PID> klasörü oluşur:
+Tarama bitince altta "SUMMARY" çıkar. Şüpheli bulgu varsa aynı klasörde
+(Hollows_Hunter\hollows_hunter.dumps\process_<PID>) dump klasörü oluşur:
 
 1) KESİN HİLE (%100 KANIT - Temiz Minecraft'ta asla çıkmaz):
    - Implanted PE > 0  : Diskte karşılığı olmayan gizli DLL/EXE enjekte edilmiş.
@@ -49,7 +51,7 @@ C:\SS_Tools\hollows_hunter.dumps\process_<PID> klasörü oluşur:
 2) YÜKSEK ŞÜPHE (10 SANİYELİK DOĞRULAMA GEREKTİRİR):
    - Patched > 0 : OpenGL/fonksiyon yaması. OBS, Discord Overlay, NVIDIA
      Overlay, RTSS/Afterburner da hook atabilir.
-     -> C:\SS_Tools\hollows_hunter.dumps\process_<PID>\scan_report.json aç:
+     -> hollows_hunter.dumps\process_<PID>\scan_report.json dosyasını aç:
         İmzalı bilinen bir overlay DLL'i değilse %100 hiledir (ESP/ClickGUI).
 
 3) TEK BAŞINA KESİN DEĞİL (YANLIŞ BAN ATMA - DUMP KONTROL ET):

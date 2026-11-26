@@ -3,8 +3,8 @@
 SEVİYE: UZMAN (CANLI RAM STRING TARAMASI - JAVAW & SERVİSLER)
 ========================================================================
 KONUMU:
-- 01_Canli_RAM_ve_Surec\Process Hacker 2.lnk
-  (01_Canli_RAM_ve_Surec\Process_Hacker_2\x64\ProcessHacker.exe)
+- 01_Canli_RAM_ve_Surec\Process_Hacker_2_Baslat.bat (otomatik Yönetici açar)
+- Doğrudan exe: 01_Canli_RAM_ve_Surec\Process_Hacker_2\x64\ProcessHacker.exe
 
 [NE İŞE YARAR?]
 Bilgisayar yeniden başlatılmadığı sürece, oyuncu hileyi diskten silmiş
@@ -13,7 +13,8 @@ RAM'inde yüzen hile adlarını, menü yazılarını, çalıştırılan dosya
 yollarını ve bağlanılan web sitelerini gösterir.
 
 [ADIM 1: YÖNETİCİ OLARAK AÇ]
-- "Process Hacker 2" kısayoluna SAĞ TIKLA -> "Yönetici olarak çalıştır" de.
+- "Process_Hacker_2_Baslat.bat" dosyasına çift tıkla (veya
+  ProcessHacker.exe'ye SAĞ TIKLA -> "Yönetici olarak çalıştır" de).
   (Yönetici açmazsan Windows servislerinin RAM'ini okuyamazsın.)
 
 [ADIM 2: MINECRAFT (javaw.exe) RAM TARAMASI]

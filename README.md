@@ -2,19 +2,29 @@
 
 Minecraft sunucu yetkilileri için hazırlanmış **kapsamlı Screenshare (SS) ve Adli Bilişim Kontrol Araçları & Adım Adım Türkçe Rehber Paketi**.
 
-Bu depo; temel yüzeysel dosya/tarayıcı kontrollerinden başlayarak **NTFS `$MFT`**, **`$UsnJrnl` (USN Journal)**, **`SRUDB.dat`**, **`Amcache / BAM`**, **canlı RAM string analizi** ve **fileless (dosyasız) bellek enjeksiyonu tespitine** kadar 17 aracı kontrol gücüne göre sıralı şekilde bir araya getirir.
+Bu depo; temel yüzeysel dosya/tarayıcı kontrollerinden başlayarak **NTFS `$MFT`**, **`$UsnJrnl` (USN Journal)**, **`SRUDB.dat`**, **`Amcache / BAM`**, **canlı RAM string analizi** ve **fileless (dosyasız) bellek enjeksiyonu tespitine** kadar 17 aracı kontrol gücüne göre sıralı şekilde, **taşınabilir (kurulumsuz)** olarak bir araya getirir.
 
 ---
 
 ## Klasör Yapısı
 
 ```text
-ss kontrol araçları/
-├── 01_Canli_RAM_ve_Surec/          # Hollows Hunter & Process Hacker 2.39
-├── 02_Adli_Bilisim_Araclari/       # C:\SS_Tools & TimelineExplorer kısayolları
-├── 03_Dosya_ve_Calistirma_Gecmisi/ # Everything, Journal Tool, WinPrefetchView, LastActivityView, PrivaZer Shellbag
+Craftlimenetwork-ss-tools/
+├── 01_Canli_RAM_ve_Surec/
+│   ├── Hollows_Hunter/             # hollows_hunter64.exe + Hollows_Hunter_CMD.bat
+│   ├── Process_Hacker_2/           # Process Hacker 2.39 (x64/x86)
+│   └── Process_Hacker_2_Baslat.bat # Tek tıkla Yönetici başlatıcı
+├── 02_Adli_Bilisim_Araclari/
+│   ├── RawCopy64.exe               # Kilitli sistem dosyalarını (SRUDB.dat, Amcache.hve) kopyalama
+│   ├── SrumECmd.exe                # SRUDB.dat ayrıştırıcı
+│   ├── MFTECmd.exe                 # C:\$MFT ayrıştırıcı
+│   ├── AmcacheParser.exe           # Amcache.hve (SHA-1) ayrıştırıcı
+│   ├── Cikti/                      # Tüm CSV ve kopya çıktılarının kaydedildiği klasör
+│   ├── Adli_Bilisim_CMD.bat        # Tek tıkla bu klasörde Yönetici CMD açar
+│   └── TimelineExplorer_Kur_ve_Ac.bat # TimelineExplorer + .NET 10 + Intel CET düzeltmesi
+├── 03_Dosya_ve_Calistirma_Gecmisi/ # everything.exe, journal-tool.exe, WinPrefetchView, LastActivityView, PrivaZer Shellbag
 ├── 04_Tarayici_ve_USB_Gecmisi/     # BrowsingHistoryView, BrowserDownloadsView, USBDriveLog
-├── 05_Uzaktan_Baglanti/            # AnyDesk
+├── 05_Uzaktan_Baglanti/            # AnyDesk.exe
 ├── 06_Detayli_Anlatim_ve_Komutlar/ # Her araç için ayrı adım adım Türkçe rehber (.txt)
 ├── LISANS.txt                      # Lisans ve telif hakkı bildirimi
 ├── README.md                       # Bu doküman
@@ -50,28 +60,25 @@ ss kontrol araçları/
 
 ---
 
-## Hızlı Kurulum ve Kullanım (Windows)
+## Hızlı Başlangıç (Windows 10 / 11 x64)
 
-1. Depoyu **Code → Download ZIP** ile indirin (veya `git clone`) ve klasörü masaüstüne çıkarın.
-2. Taşınabilir araçların büyük bölümü (`Hollows Hunter`, `Process Hacker 2.39`, `Journal Tool`, `WinPrefetchView`, `LastActivityView`, `PrivaZer Shellbag`, `BrowsingHistoryView`, `BrowserDownloadsView`, `USBDriveLog`, `AnyDesk`) doğrudan kendi klasörlerinden **Yönetici olarak çalıştır** ile açılabilir.
-3. **Adli bilişim komut araçları (`C:\SS_Tools`) için** — `SrumECmd`, `MFTECmd`, `AmcacheParser`, `TimelineExplorer` ve `RawCopy64` araçlarını rehberlerdeki komutlarla birebir uyumlu şekilde kurmak için **Yönetici PowerShell** penceresinde şu komutu çalıştırın:
+1. **Releases** sayfasından en güncel ZIP dosyasını **İndirilenler (`Downloads`)** klasörüne indirin ve klasöre çıkarın.
+2. Tüm temel ve komut satırı araçları (`everything.exe`, `ProcessHacker.exe`, `hollows_hunter64.exe`, `RawCopy64.exe`, `SrumECmd.exe`, `MFTECmd.exe`, `AmcacheParser.exe`, `journal-tool.exe`, `NirSoft` araçları, `PrivaZer`, `AnyDesk`) **paketin içinde taşınabilir olarak hazırdır** — ayrıca `C:\SS_Tools` oluşturmanız gerekmez!
+3. **CSV görüntüleyici (`TimelineExplorer`) ve `.NET 10` için tek tık:**
+   - `02_Adli_Bilisim_Araclari\TimelineExplorer_Kur_ve_Ac.bat` dosyasına çift tıklayın.
+   - *(GitHub 100 MB dosya sınırı nedeniyle 206 MB'lık `TimelineExplorer.exe` depoya gömülmemiştir; bu betik ilk açılışta `TimelineExplorer`'ı ve eksikse `.NET 10 Desktop Runtime`'ı otomatik indirip Intel 12. nesil+ CET `0x80131506` çökme düzeltmesini de tek seferde uygular.)*
+4. **Komut satırı araçlarını açmanın en kolay yolu:**
+   - **Amcache / SRUM / MFT (`13–15`) için:** `02_Adli_Bilisim_Araclari\Adli_Bilisim_CMD.bat` dosyasına çift tıklayın (Yönetici CMD doğrudan doğru klasörde açılır).
+   - **Hollows Hunter (`17`) için:** `01_Canli_RAM_ve_Surec\Hollows_Hunter\Hollows_Hunter_CMD.bat` dosyasına çift tıklayın.
+   - **Manuel CMD kullanmak isterseniz** (İndirilenler'deki klasör adı `Craftlimenetwork-ss-tools-1.1` veya `-main` ne olursa olsun otomatik bulur):
+     ```bat
+     for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*02_Adli_Bilisim_Araclari"') do cd /d "%i"
+     ```
+     ```bat
+     for /f "delims=" %i in ('dir /b /s /ad "%USERPROFILE%\Downloads\*Hollows_Hunter"') do cd /d "%i"
+     ```
 
-```powershell
-New-Item -ItemType Directory -Path C:\SS_Tools\Cikti -Force | Out-Null
-Invoke-WebRequest "https://download.ericzimmermanstools.com/Get-ZimmermanTools.zip" -OutFile "C:\SS_Tools\Get-ZimmermanTools.zip"
-Expand-Archive "C:\SS_Tools\Get-ZimmermanTools.zip" -DestinationPath "C:\SS_Tools" -Force
-& "C:\SS_Tools\Get-ZimmermanTools.ps1" -Dest "C:\SS_Tools" -NetVersion 10
-Invoke-WebRequest "https://github.com/jschicht/RawCopy/raw/master/RawCopy64.exe" -OutFile "C:\SS_Tools\RawCopy64.exe"
-Copy-Item ".\01_Canli_RAM_ve_Surec\Hollows_Hunter\hollows_hunter64.exe" "C:\SS_Tools\hollows_hunter64.exe" -Force
-```
-
-> **Notlar:**
-> - Eric Zimmerman araçları için **.NET 10 Desktop Runtime (x64)** gerekir.
-> - Windows Defender, adli bilişim/RAM inceleme araçlarını (`Process Hacker`, `RawCopy`, `Hollows Hunter`, `NirSoft`) zaman zaman *HackTool/PUA* olarak uyarabilir; kontrol klasörünü Defender dışlama listesine eklemeniz önerilir.
-> - 12. nesil ve üzeri Intel işlemcilerde `TimelineExplorer` içinde `File → Open` tıklanınca `0x80131506` hatası alırsanız Yönetici PowerShell'de şu komutu çalıştırın:
->   ```powershell
->   Set-ProcessMitigation -Name TimelineExplorer.exe -Disable UserShadowStack, UserShadowStackStrictMode
->   ```
+> **Windows Defender Notu:** Adli bilişim ve RAM tarama araçları (`Process Hacker`, `RawCopy64`, `Hollows Hunter`, `NirSoft`) güvenlik yazılımları tarafından zaman zaman *HackTool / PUA* olarak işaretlenebilir; indirilen klasörü Defender dışlama listesine eklemeniz önerilir.
 
 ---
 
