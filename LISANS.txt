@@ -1,8 +1,8 @@
 ﻿========================================================================
 LİSANS VE TELİF HAKKI BİLDİRİMİ (LICENSE & COPYRIGHT NOTICE)
 ========================================================================
-Telif Hakkı (c) 2026 Omar Yiğitcan Mengü
-Yazar  : Omar Yiğitcan Mengü
+Telif Hakkı (c) 2026 Omar Yiğitcan Mengü & CraftlimeNetwork
+Yazar  : Omar Yiğitcan Mengü & CraftlimeNetwork
 GitHub : https://github.com/CmdSuv
 
 KULLANIM KOŞULLARI:
@@ -27,16 +27,16 @@ KULLANIM KOŞULLARI:
    Bu lisans ve telif hakkı bildirimi ne olursa olsun dosyalardan
    çıkarılamaz, silinemez, gizlenemez veya değiştirilemez. Herhangi bir
    kullanım, kopyalama veya paylaşımda bu lisans metninin ve yazar
-   bilgilerinin (Omar Yiğitcan Mengü - https://github.com/CmdSuv)
+   bilgilerinin (Omar Yiğitcan Mengü & CraftlimeNetwork - https://github.com/CmdSuv)
    dosya içinde eksiksiz olarak kalması zorunludur.
 
 5. ÜÇÜNCÜ TARAF YAZILIMLAR NOTU:
-   Bu lisans; Omar Yiğitcan Mengü tarafından hazırlanan rehber
+   Bu lisans; Omar Yiğitcan Mengü ve CraftlimeNetwork tarafından hazırlanan rehber
    metinlerini, anlatımları, komut derlemelerini ve klasör düzenini
    kapsar. Paket içinde yer alan üçüncü taraf araçlar kendi orijinal
    geliştiricilerinin lisans ve kullanım koşullarına tabidir.
 
 ========================================================================
-Yazar  : Omar Yiğitcan Mengü
+Yazar  : Omar Yiğitcan Mengü & CraftlimeNetwork
 GitHub : https://github.com/CmdSuv
 ========================================================================

@@ -40,7 +40,6 @@ Craftlimenetwork-ss-tools/
 
 ---
 
-
 ## 3 Adımda Kullanım (Windows 10 / 11 x64)
 
 1. Yukarıdaki **HEMEN İNDİR** butonuna tıklayıp `CraftlimeNetwork-SS-Tools.zip` dosyasını indirin ve klasöre çıkarın.
@@ -53,7 +52,7 @@ Craftlimenetwork-ss-tools/
 
 ## Lisans ve Telif Hakkı
 
-**Telif Hakkı (c) 2026 Omar Yiğitcan Mengü** — [github.com/CmdSuv](https://github.com/CmdSuv)
+**Telif Hakkı (c) 2026 Omar Yiğitcan Mengü & CraftlimeNetwork** — [github.com/CmdSuv](https://github.com/CmdSuv)
 
 - **Kullanılabilir:** Kişisel, eğitim ve Minecraft sunucu yetkili (SS) kontrolleri için ücretsiz kullanılabilir ve orijinal hali bozulmadan paylaşılabilir.
 - **Değiştirilemez:** İçerik değiştirilemez, düzenlenemez, türev çalışma oluşturulamaz ve başka bir isimle sahiplenilemez.

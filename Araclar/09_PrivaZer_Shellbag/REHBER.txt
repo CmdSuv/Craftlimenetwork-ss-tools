@@ -34,7 +34,8 @@ Shellbag kayıtlarında kalır!
 ========================================================================
 LİSANS VE TELİF BİLDİRİMİ (DOSYADAN ÇIKARILAMAZ)
 ------------------------------------------------------------------------
-Yazar  : Omar Yiğitcan Mengü
+Telif  : (c) 2026 Omar Yiğitcan Mengü & CraftlimeNetwork
+Yazar  : Omar Yiğitcan Mengü & CraftlimeNetwork
 GitHub : https://github.com/CmdSuv
 
 - KULLANILABİLİR : Kişisel, eğitim ve SS kontrol amaçlı ücretsiz kullanılabilir.
